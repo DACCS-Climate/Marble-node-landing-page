@@ -1,0 +1,19 @@
+{% extends "layouts/main.html" %}
+{% set node_name = "UofT" %}
+{% set page_title = "UofT" %}
+{% set node_login_url = "https://daccs.cs.toronto.edu/jupyter" %}
+{% set register_url = "" %}
+
+{% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+  <main class="px-3 my-auto rounded welcome-container">
+    <h1>Welcome to the {{ node_name }} node</h1>
+    <p class="lead fs-4">Connect to the Marble network</p>
+    <p class="fs-6">Don't have an account?  Please register.</p>
+    <p class="lead">
+      <a href="{{ node_login_url }}" class="btn btn-lg btn-light fw-bold border-white bg-white">Connect</a>
+      <a href="{{ register_url }}" class="btn btn-lg btn-light fw-bold border-white bg-white">Register</a>
+    </p>
+  </main>
+</div>
+{% endblock content %}
