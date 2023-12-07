@@ -5,15 +5,23 @@
 {% set register_url = "" %}
 
 {% block content %}
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
-  <main class="px-3 my-auto rounded welcome-container">
-    <h1>Welcome to the {{ node_name }} node</h1>
-    <p class="lead fs-4">Connect to the Marble network</p>
-    <p class="fs-6">Don't have an account?  Please register.</p>
-    <p class="lead">
-      <a href="{{ node_login_url }}" class="btn btn-lg btn-light fw-bold border-white bg-white">Connect</a>
-      <a href="{{ register_url }}" class="btn btn-lg btn-light fw-bold border-white bg-white">Register</a>
-    </p>
-  </main>
-</div>
+<div class="container ">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4  ">
+      <div class="col-12 text-end">
+        <a class="text-dark btn btn-lg btn-light fw-bold me-1 " href="{{ node_login_url }}">Login</a>
+
+      </div>
+    </header>
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+      <main class="px-3 my-auto rounded container-background">
+        <h1>Marble @ {{ node_name }}</h1>
+        <p class="lead fs-4">Join our waitlist</p>
+        <p class="lead">
+          <a href="{{ register_url }}" class="btn btn-lg btn-light fw-bold border-white bg-white">Sign Up</a>
+        </p>
+      </main>
+    </div>
+  </div>
+
 {% endblock content %}
